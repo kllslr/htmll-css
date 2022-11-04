@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+      <div id="logo" onclick="slowScroll('#top')">
+        <span>itSkill</span>
+      </div>
+      <div id="about">
+        <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+        <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+        <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+        <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+      </div>
+      </header>
+      <div id="top">
+   <h1>Введение ­в</h1>
+   <h3>Программирование</h3>
+ </div>
+ <div id="main">
+   <div class="intro">
+     <h2>Наши услуги помогут вам!</h2>
+     <span>Большой выбор всего, что может вам пригодиться</span>
+   </div>
+   <div class="text">
+     <span>Вы изучите основные профессии в сфере IT: Frontend-разработчик, Java-разработчик, Python-разработчик, тестировщик, специалист по кибербезопасности, специалист по Data Science, iOS-разработчик и Android-разработчик. Разберётесь, где и для чего используются различные языки программирования и примените их на практике: напишете сайт и простые программы. В конце курса пройдёте тест на профориентацию. Поймёте, какая профессия подходит именно вам.</span>
+   </div>
+ </div>
+ <div id="overview">
+   <h2>Преимущества</h2>
+   <h4>с нами все проще</h4>
+
+   <div class="img">
+     <img src="https://techrocks.ru/wp-content/uploads/2020/06/chris-ried-ieic5tq8ymk-unsplash-1280x1000-1-1024x683-1.jpg" alt="">
+     <span>Изучение языка Python для начинающих</span>
+   </div>
+   <div class="img">
+     <img src="https://digital-academy.ru/assets/cache_image/foto/java-cover_600x450_878.png" alt="">
+     <span>Изучение языка Java для начинающих</span>
+   </div>
+ </div>
+ <div id="contacts">
+<center><h5>Обратная связь</h5></center>
+<form id="form_input">
+ <label for="name">Имя <span>*</span></label><br>
+ <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+ <label for="email">Ваша почта <span>*</span></label><br>
+ <input type="email" placeholder="Введите email" name="email" id="email"><br>
+ <label for="message">Сообщение <span>*</span></label><br>
+ <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+ <div id="mess_send" class="btn">Отправить</div>
+</form>
+</div>
+ <div id="faq">
+     <div>
+       <span class="title">Оплата</span><br>
+       <span class="heading">pop?</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+       <span class="heading">pop</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+       <span class="heading">pop</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+     </div>
+     <div>
+       <span class="title">Информация</span><br>
+       <span class="heading">Что входит в услуги сервиса</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+       <span class="heading">Что входит в услуги сервиса</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+       <span class="heading">Что входит в услуги сервиса</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+     </div>
+     <div>
+       <span class="title">Гарантии</span><br>
+       <span class="heading">Какие гарантии есть</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+       <span class="heading">Какие гарантии есть</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+       <span class="heading">Какие гарантии есть</span>
+       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+     </div>
+   </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+   function slowScroll(id) {
+     $('html, body').animate({
+       scrollTop: $(id).offset().top
+     }, 500);
+   }
+
+   $(document).on("scroll", function () {
+     if($(window).scrollTop() === 0)
+       $("header").removeClass("fixed");
+     else
+       $("header").attr("class", "fixed");
+   });
+ </script>
+    </header>
+</body>
+</html>
